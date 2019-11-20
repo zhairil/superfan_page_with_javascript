@@ -1,0 +1,210 @@
+html, body{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	display: flex;
+	cursor: url('images/cursor1.gif'), auto;
+}
+img{
+	max-height:80%;
+	max-width:80%;
+}
+p{
+	display:flex;
+	margin:0;
+	max-height:100%;
+	max-width:100%;
+	font-family: 'Work Sans', sans-serif;
+}
+h1{
+	display:flex;
+	margin: 0 0 0.5em 0;
+	font-size:25px;
+	max-height:100%;
+	max-width:100%;
+	font-family: 'Work Sans', sans-serif;
+}
+.arrow{
+	display:flex;
+	height:5%;
+	width:5%;
+	margin:1em;
+}
+.arrow:hover{
+	cursor:url('images/cursor2.gif'), auto;
+	height:6%;
+	width:6%;
+}
+.arrow:active{
+	background-color: red;
+}
+.car{
+	display:block;
+	width:70%;
+	height:100%;
+	background-image:url("images/forza.png");
+	background-position:center;
+}
+.display{
+	display:flex;
+	width:100%;
+	height:80%;
+	align-items:center;
+	justify-content:center;
+}
+.car-name{
+	display:flex;
+	width:100%;
+	height:20%;
+	align-items:center;
+	justify-content:center;
+}
+.statistics-upgrades{
+	width:30%;
+	height:100%;
+}
+.statistics{
+	height:45%;
+	width:100%;
+	background-color:#cccccc;
+}
+.upgrades-options{
+	height:55%;
+	width:100%;
+}
+.upgrades{
+	height:calc(100% * 5/6);
+	width:100%;
+	margin:0;
+}
+.upgrade-button{
+	height:calc(100%/6);
+	width:100%;
+	background-color:#ffffcc;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+.upgrade-button:hover{
+	background-color:#ffff00;
+	cursor:url('images/cursor2.gif'), auto;
+}
+.upgrade-button:active{
+	transition: all 0.1s;
+	transform: translate(0px,5px);
+	border-bottom: 1px solid;
+}
+.options{
+	height:calc(100%/6);
+	width:100%;
+	display:flex;
+}
+.option-button{
+	height:100%;
+	width:calc(100%/3);
+	background-color:#ff9999;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+.option-button:hover{
+	background-color:#ff4d4d;
+	cursor:url('images/cursor2.gif'), auto;
+}
+/*tablet layout*/
+@media only screen and (max-width:1000px){
+	body{display:block;}
+	h1{font-size:16px;}
+	.car{
+		width:100%;
+		height:70%;
+		display:block;
+	}
+	.statistics-upgrades{
+		width:100%;
+		height:30%;
+		display:flex;
+	}
+	.statistics{
+		width:50%;
+		height:100%;
+		max-height:100%;
+	}
+	.upgrades-options{
+		width:50%;
+		height:100%;
+	}
+	.upgrades{
+		height:calc(100%*2/3);
+		display:flex;
+		flex-wrap:wrap;
+	}
+	.upgrade-button{
+		width:calc(100%/3);
+		height:50%;
+	}
+	.options{
+		height:calc(100%/3);
+	}
+}
+@media only screen and (max-width:650px){
+	p{font-size:14px;}
+}
+/*phone layout*/
+@media only screen and (max-width:600px){
+	img{
+		max-height:100%;
+		max-width:100%;
+	}
+	h1{
+		margin-bottom:1px;
+		margin-right:15px;
+		}
+	.arrow{margin:0;}
+	.car{
+		height:calc(100%*4/9);
+		align-items:top;
+		justify-content:top;
+	}
+	.display{
+		flex-wrap:wrap;
+	}
+	.right{
+		order:1;
+		margin-left:5px;
+	}
+	.left{
+		order:1;
+		margin-right:5px;
+	}	
+	.statistics-upgrades{
+		height:calc(100%*5/9);
+		display:block;
+	}
+	.statistics{
+		width:100%;
+		height:40%;
+		display:flex;
+		flex-wrap:wrap;
+	}
+	.upgrades{
+		width:100%;
+	}
+	.upgrades-options{
+		width:100%;
+		height:60%;
+	}
+	
+}
+@media only screen and (max-width:330px){
+	p{font-size:11px;}
+}
+@media only screen and (max-height:600px){
+	h1{
+		font-size:16px;
+		margin-bottom:0;
+	}
+}
+@media only screen and (max-height:400px){
+	h1{font-size:12px;}
+}

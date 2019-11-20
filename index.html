@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="images/best_hellcat_livery.png" rel="icon" type="image/x-icon" />
+		<title>Forza Horizon 4 Upgrade Simulator</title>
+		<link rel="stylesheet" href="style.css" />
+		<link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
+		<script src="variables.js"></script>
+	</head>
+	<body>
+		<!-- this is where the car is shown -->
+		<div class="car">
+			<div class="display">
+				<img src="images/left-arrow.gif" class="left arrow" onclick="changeImgLeft()">
+				<img id="car" src="images/dodge_charger.jpg">
+				<img src="images/right-arrow.gif" class="right arrow" onclick="changeImgRight()">
+				<audio src="sounds/loud_faith.mp3" type="audio/mp3" id="eurobeat1"></audio>
+				<audio src="sounds/purest.mp3" type="audio/mp3" id="eurobeat2"></audio>
+			</div>
+			<div class="car-name">
+				<p id="carName" onclick="eurobeat()">Dodge Charger SRT Hellcat</p>
+			</div>
+		</div>
+		<div class="statistics-upgrades">
+			<!-- performance statistics are shown here -->
+			<div class="statistics">
+				<h1 id="speed"></h1>
+				<h1 id="handling"></h1>
+				<h1 id="acceleration"></h1>
+				<h1 id="launch"></h1>
+				<h1 id="braking"></h1>
+				<h1 id="hp"></h1>
+				<h1 id="g-force"></h1>
+				<h1 id="weight"></h1>
+			</div>
+			<!-- upgrades are shown here -->
+			<div class="upgrades-options">
+				<div class="upgrades">
+				<audio src="sounds/dodge_charger_startup.wav" type="audio/wav" id="engine1"></audio>
+				<audio src="sounds/nissan_240sx_startup.wav" type="audio/wav" id="engine2"></audio>
+				<audio src="sounds/w16_startup.wav" type="audio/wav" id="engine3"></audio>
+					<div class="upgrade-button" onclick="upgradeEngine()">
+						<p>Engine</p>
+					</div>
+					<div class="upgrade-button" onclick="upgradeHandling()">
+						<p>Handling</p>
+					</div>
+					<div class="upgrade-button" onclick="upgradeDrivetrain()">
+						<p>Drivetrain</p>
+					</div>
+					<div class="upgrade-button" onclick="upgradeWheels()">
+						<p>Wheels</p>
+					</div>
+					<div class="upgrade-button" onclick="upgradeAerodynamics()">
+						<p>Aerodynamics</p>
+					</div>
+					<div class="upgrade-button" onclick="engineSwap()">
+						<p>Engine Swap</p>
+					</div>
+				</div>
+				<!-- option buttons -->
+				<div class="options">
+					<div class="option-button" onclick="stop()">
+						<p>Back</p>
+					</div>
+					<div class="option-button" onclick="resetUpgrades()">
+						<p>Reset Upgrades</p>
+					</div>
+					<div class="option-button">
+						<p>Finish</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
