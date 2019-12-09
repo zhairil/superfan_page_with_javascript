@@ -36,17 +36,49 @@ function dodgeStats(){
 	weight = 4500;
 	update();
 }
+function fordStats(){
+	console.log("ford mustang stats")
+	speed = 7.5;
+	handling = 5.2;
+	acceleration = 8;
+	launch = 9;
+	braking = 6;
+	hp = 460;
+	gforce = 1.05;
+	weight = 3800;
+	update();
+}
 //arrow functions
 function changeImgLeft(){
-	car.src = "images/dodge_charger.jpg";
-	carName.innerHTML = "Dodge Charger SRT Hellcat";
-	dodgeStats();
+	if(car.src.match("images/nissan_240SX.jpg")){
+		car.src = "images/dodge_charger.jpg";
+		carName.innerHTML = "Dodge Charger SRT Hellcat";
+		dodgeStats();
+	} else if (car.src.match("images/rtr_mustang.jpg")){
+		car.src = "images/nissan_240SX.jpg";
+		carName.innnerHTML = "Nissan 240SX";
+		nissanStats();
+	} else {
+		car.src = "images/rtr_mustang.jpg";
+		carName.innerHTML = "Ford Mustang RTR"
+		fordStats();
+	}
 }
 
 function changeImgRight(){
-	car.src = "images/nissan_240SX.jpg";
-	carName.innerHTML = "Nissan 240SX";
-	nissanStats();
+	if(car.src.match("images/dodge_charger.jpg")){
+		car.src = "images/nissan_240SX.jpg";
+		carName.innerHTML = "Nissan 240SX";
+		nissanStats();
+	} else if (car.src.match("images/nissan_240SX.jpg")){
+		car.src = "images/rtr_mustang.jpg";
+		carName.innerHTML = "Ford Mustang RTR";
+		fordStats();
+	} else {
+		car.src = "images/dodge_charger.jpg";
+		carName.innerHTML = "Dodge Charger SRT Hellcat"
+		dodgeStats();
+	}
 }
 //main reset function
 function resetUpgrades(){
@@ -54,33 +86,45 @@ function resetUpgrades(){
 		nissanStats();
 	} else if (car.getAttribute('src') == "images/dodge_charger.jpg"){
 		dodgeStats();
+	} else {
+		fordStats();
 	}
 }
 //upgrade button functions
 function upgradeEngine(){
 	speed++;
 	hp = hp + 300;
+	weight =  weight + 50;
 	update();
 }
 function upgradeHandling(){
 	handling++;
 	gforce = gforce + 0.1;
+	var newGforce = Math.round( gforce * 10) / 10;
+	gforce = newGforce;
 	update();
 }
 function upgradeDrivetrain(){
 	acceleration = acceleration + 0.3;
+	var newAcceleration = Math.round( acceleration * 10) / 10;
+	acceleration = newAcceleration;
 	weight = weight - 500;
 	update();
 }
 function upgradeWheels(){
 	launch = launch + 2;
 	handling =  handling + 3;
+	braking++;
 	weight = weight - 20;
 	gforce = gforce + 0.3;
+	var newGforce = Math.round( gforce * 10) / 10;
+	gforce = newGforce;
 	update();
 }
 function upgradeAerodynamics(){
 	braking = braking + 0.1;
+	var newBraking = Math.round( braking * 10) / 10;
+	braking = newBraking;
 	handling = handling + 2;
 	update();
 }
@@ -99,7 +143,9 @@ function engineSwap(){
 		update();
 	}
 }
-
+function finish(){
+	alert("BUY FH4 NOW");
+}
 //hidden background music function
 function eurobeat(){
 	document.getElementById("eurobeat1").play();

@@ -14,7 +14,7 @@
 		<div class="car">
 			<div class="display">
 				<img src="images/left-arrow.gif" class="left arrow" onclick="changeImgLeft()">
-				<img id="car" src="images/dodge_charger.jpg">
+				<img id="car" src="images/dodge_charger.jpg" onclick="stop()">
 				<img src="images/right-arrow.gif" class="right arrow" onclick="changeImgRight()">
 				<audio src="sounds/loud_faith.mp3" type="audio/mp3" id="eurobeat1"></audio>
 				<audio src="sounds/purest.mp3" type="audio/mp3" id="eurobeat2"></audio>
@@ -62,13 +62,10 @@
 				</div>
 				<!-- option buttons -->
 				<div class="options">
-					<div class="option-button" onclick="stop()">
-						<p>Back</p>
-					</div>
 					<div class="option-button" onclick="resetUpgrades()">
 						<p>Reset Upgrades</p>
 					</div>
-					<div class="option-button">
+					<div class="option-button" onclick="finish()">
 						<p>Finish</p>
 					</div>
 				</div>

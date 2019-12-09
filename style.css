@@ -32,8 +32,8 @@ h1{
 }
 .arrow:hover{
 	cursor:url('images/cursor2.gif'), auto;
-	height:6%;
-	width:6%;
+	height:8%;
+	width:8%;
 }
 .arrow:active{
 	background-color: red;
@@ -58,6 +58,7 @@ h1{
 	height:20%;
 	align-items:center;
 	justify-content:center;
+	font-size:40px;
 }
 .statistics-upgrades{
 	width:30%;
@@ -76,6 +77,7 @@ h1{
 	height:calc(100% * 5/6);
 	width:100%;
 	margin:0;
+	background-color:#ffdd99;
 }
 .upgrade-button{
 	height:calc(100%/6);
@@ -91,17 +93,17 @@ h1{
 }
 .upgrade-button:active{
 	transition: all 0.1s;
-	transform: translate(0px,5px);
-	border-bottom: 1px solid;
+	transform: translate(0px,10px);
 }
 .options{
 	height:calc(100%/6);
 	width:100%;
 	display:flex;
+	background-color:red;
 }
 .option-button{
-	height:100%;
-	width:calc(100%/3);
+	height:95%;
+	width:calc(100%/2);
 	background-color:#ff9999;
 	display:flex;
 	align-items:center;
@@ -111,6 +113,11 @@ h1{
 	background-color:#ff4d4d;
 	cursor:url('images/cursor2.gif'), auto;
 }
+.option-button:active{
+	transition: all 0.1s;
+	transform: translate(0px,3px);
+	border-bottom: 1px solid;
+}
 /*tablet layout*/
 @media only screen and (max-width:1000px){
 	body{display:block;}
@@ -119,6 +126,11 @@ h1{
 		width:100%;
 		height:70%;
 		display:block;
+	}
+	.arrow:hover{
+		cursor:url('images/cursor2.gif'), auto;
+		height:1%;
+		width:1%;
 	}
 	.statistics-upgrades{
 		width:100%;
@@ -149,6 +161,9 @@ h1{
 }
 @media only screen and (max-width:650px){
 	p{font-size:14px;}
+	.car-name{
+		font-size:30px;
+	}
 }
 /*phone layout*/
 @media only screen and (max-width:600px){
