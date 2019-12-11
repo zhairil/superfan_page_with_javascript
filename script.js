@@ -147,9 +147,9 @@ function finish(){
 	alert("BUY FH4 NOW");
 }
 //hidden background music function
-//function eurobeat(){
-	//document.getElementById("eurobeat1").play();
-//}
+function eurobeat(){
+	document.getElementById("eurobeat1").play();
+}
 function stop(){
 	document.getElementById("eurobeat1").pause();
 	document.getElementById("eurobeat2").pause();
