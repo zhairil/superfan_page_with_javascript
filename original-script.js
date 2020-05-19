@@ -1,16 +1,14 @@
 //advanced function
 function update(){
 	//upgrade variables
-	statsVar = [speed, handling, acceleration, launch, braking, hp, gforce, weight]
-	statsID = ["speed", "handling", "acceleration", "launch", "braking", "hp", "g-force", "weight"]
-	desc = ["SPEED: ", "HANDLING: ", "ACCELERATION: ", "LAUNCH: ", " BRAKING: ", "HORSEPOWER: ", "G-FORCE: ","WEIGHT: "]
-	unit = [" "," "," "," "," "," hp", " G", " lbs"]
-	i = 0
-	for (i = 0; i < 8; i++) {
-		document.getElementById(statsID[i]).innerHTML = desc[i] +
-		statsVar[i] + unit[i];
-		console.log(i,statsID[i],desc[i],statsVar[i],unit[i]);
-	}
+	document.getElementById("speed").innerHTML = "SPEED: " + speed;
+	document.getElementById("handling").innerHTML = "HANDLING: " + handling;
+	document.getElementById("acceleration").innerHTML = "ACCELERATION: " + acceleration;
+	document.getElementById("launch").innerHTML = "LAUNCH: " + launch;
+	document.getElementById("braking").innerHTML = "BRAKING: " + braking;
+	document.getElementById("hp").innerHTML = "HORSEPOWER: " + hp + " hp";
+	document.getElementById("g-force").innerHTML = "G-FORCE: " + gforce + " G";
+	document.getElementById("weight").innerHTML = "WEIGHT: " + weight + " lbs";
 }
 //reset functions for each car
 function nissanStats(){
